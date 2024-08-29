@@ -1,0 +1,4 @@
+progress
+httpx[http2]
+async
+colorama
