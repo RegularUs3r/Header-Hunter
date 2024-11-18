@@ -1,3 +1,5 @@
+# CURRENTLY OUTDATED!!
+
 ![Python minimum version](https://img.shields.io/badge/Python-3.10%2B-brightgreen)
 # DESCRIPTION
 Header hunter is a python script aimed for headers evaluation, whether a certain target has or not all valid security headers
