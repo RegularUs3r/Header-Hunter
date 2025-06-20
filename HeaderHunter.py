@@ -14,19 +14,15 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("-H", "--header", metavar="", action="append", help="Add custom header")
 parser.add_argument("-x", "--proxy", metavar="", help="Proxy - http://IP:PORT")
-parser.add_argument("-r", "--raw", action="store_true", help="Display raw response")
-parser.add_argument("-pl", "--path-list", dest="path_list", metavar="")
 parser.add_argument("-sh", "--security-headers", dest="security_headers", action="store_true")
 parser.add_argument("-b", "--banner", action="store_true")
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("-t", "--target", metavar="")
 parser.add_argument(" ", nargs="*")
 args = parser.parse_args()
-raw = args.raw
 target = args.target
 header = args.header
 proxy = args.proxy
-path_list = args.path_list
 security_headers = args.security_headers
 banner = args.banner
 
@@ -36,6 +32,6 @@ def start():
     NC = '\033[0m'
     # print(Fore.BLUE +"Created By: " + Fore.RESET + ORANGE + "RegularUs3r | https://github.com/regularus3r" + NC)
     targett = target
-    http_builder(targett,  header, proxy, raw, path_list, security_headers, banner)
+    http_builder(targett,  header, proxy, security_headers, banner)
 
 start()
